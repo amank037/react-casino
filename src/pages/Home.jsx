@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
+import public1 from '../assets/home/public.png'
+import public2 from '../assets/home/public2.jpeg'
+import public3 from '../assets/home/public3.png'
+import public4 from '../assets/home/public4.png'
 
 const Home = () => {
   const heroImages = [
-    'https://imagedelivery.net/HUCIz1_hKgf2q2UoNlOq1w/541813e7-073a-43dc-7936-a5eca4ce4f00/public',
-    'https://imagedelivery.net/HUCIz1_hKgf2q2UoNlOq1w/299ace0a-6d14-4bd6-b973-a75ea433e000/public',
-    'https://imagedelivery.net/HUCIz1_hKgf2q2UoNlOq1w/b15de643-4f2d-409b-2cbb-427d6d6bc700/public',
-    'https://imagedelivery.net/HUCIz1_hKgf2q2UoNlOq1w/299ace0a-6d14-4bd6-b973-a75ea433e000/public',
+    public1, 
+    public2, 
+    public3, 
+    public4
   ]
 
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0)
@@ -47,16 +51,16 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="w-full relative mt-0">
-        <div className="relative w-full h-[80vh] min-h-[500px] overflow-hidden"> 
-          <div
-            className="w-full h-full bg-cover bg-center object-cover"
-            style={{ 
-              backgroundImage: `url(${heroImages[currentHeroIndex]})`,
-              backgroundPosition: 'center center' 
-            }}
-          ></div>
-        </div>
+      <div className="w-full relative mt-0 h-[32rem]">
+        <div className="w-full relative h-[32rem]">
+          <div className="relative w-full h-[32rem] overflow-hidden">
+            <img
+              src={heroImages[currentHeroIndex]}
+              alt={`Hero image ${currentHeroIndex + 1}`}
+              className="w-full h-full object-fill"
+            />
+          
+          </div>
 
         <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4">
           {heroImages.map((_, index) => (
@@ -70,74 +74,78 @@ const Home = () => {
         </div>
       </div>
 
+      </div>
+
       <div className="bg-blue-600 w-full py-2 text-center text-white">
         <span className="ml-4">🔊</span>
       </div>
 
-      <div className='grid grid-cols-2 grid-rows-1 gap-4 px-60 py-8'> {/* Added padding top and bottom */}
-        <div className="py-4">
-          <div className="relative w-full h-[500px]">
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${secondScrollerImages1[currentSecondScrollerIndex1]})` }}
-            ></div>
+      <div className="bg-home-grey flex justify-center">
 
-            <div className="absolute top-0 left-0 right-0 bg-lightblue-500 h-4"></div>
-
-            <div className="absolute top-0 right-0 flex items-center gap-4 p-4">
-              <button
-                onClick={() =>
-                  setCurrentSecondScrollerIndex1(
-                    (prevIndex) => (prevIndex - 1 + secondScrollerImages1.length) % secondScrollerImages1.length
-                  )
-                }
-                className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full"
-              >
-                &#8592;
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentSecondScrollerIndex1((prevIndex) => (prevIndex + 1) % secondScrollerImages1.length)
-                }
-                className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full"
-              >
-                &#8594;
-              </button>
+        <div className='w-[75rem] grid grid-cols-2 grid-rows-1 gap-4  py-8'>
+          <div className="py-4">
+            <div className="relative w-full h-96">
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${secondScrollerImages1[currentSecondScrollerIndex1]})` }}
+              ></div>
+              {/* Blue header bar */}
+              <div className="absolute top-0 left-0 right-0 bg-blue-500 h-12 flex items-center justify-between px-2">
+                <div className="text-white font-bold">Favourites</div>
+                <div className="flex">
+                  <button
+                    onClick={() => setCurrentSecondScrollerIndex1(
+                      (prevIndex) => (prevIndex - 1 + secondScrollerImages1.length) % secondScrollerImages1.length
+                    )}
+                    className="bg-transparent text-white px-4 py-1 flex items-center justify-center"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={() => setCurrentSecondScrollerIndex1(
+                      (prevIndex) => (prevIndex + 1) % secondScrollerImages1.length
+                    )}
+                    className="bg-transparent text-white px-4 py-1 flex items-center justify-center"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="py-4">
-          <div className="relative w-full h-[500px]">
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${secondScrollerImages2[currentSecondScrollerIndex2]})` }}
-            ></div>
-
-            <div className="absolute top-0 left-0 right-0 bg-lightblue-500 h-4"></div>
-
-            <div className="absolute top-0 right-0 flex items-center gap-4 p-4">
-              <button
-                onClick={() =>
-                  setCurrentSecondScrollerIndex2(
-                    (prevIndex) => (prevIndex - 1 + secondScrollerImages2.length) % secondScrollerImages2.length
-                  )
-                }
-                className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full"
-              >
-                &#8592;
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentSecondScrollerIndex2((prevIndex) => (prevIndex + 1) % secondScrollerImages2.length)
-                }
-                className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded-full"
-              >
-                &#8594;
-              </button>
+          
+          <div className="py-4">
+            <div className="relative w-full h-96">
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${secondScrollerImages2[currentSecondScrollerIndex2]})` }}
+              ></div>
+              {/* Blue header bar */}
+              <div className="absolute top-0 left-0 right-0 bg-blue-500 h-12 flex items-center justify-between px-2">
+                <div className="text-white font-bold">Favourites</div>
+                <div className="flex">
+                  <button
+                    onClick={() => setCurrentSecondScrollerIndex2(
+                      (prevIndex) => (prevIndex - 1 + secondScrollerImages2.length) % secondScrollerImages2.length
+                    )}
+                    className="bg-transparent text-white px-4 py-1 flex items-center justify-center"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={() => setCurrentSecondScrollerIndex2(
+                      (prevIndex) => (prevIndex + 1) % secondScrollerImages2.length
+                    )}
+                    className="bg-transparent text-white px-4 py-1 flex items-center justify-center"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </div>              
+
       </div>
     </div>
   )
