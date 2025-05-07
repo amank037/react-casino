@@ -123,7 +123,7 @@ const Header = () => {
                 <li className='flex items-center gap-4 h-full'>
                     <button className="glow-border">
                         <img src={homeIcon} alt="" className='h-6' />
-                        <a href="/"></a>
+                        <a href="https://react-casino.onrender.com"></a>
                     </button>
                     <button className="glow-border">
                         <img src={mobileIcon} alt="" className='h-6' />
