@@ -122,7 +122,7 @@ const Header = () => {
             <ul className="flex text-white items-center justify-between h-full ">
                 <li className='flex items-center gap-4 h-full'>
                     <button className="glow-border">
-                        <a href="/home">
+                        <a href="/">
                         <img src={homeIcon} alt="" className='h-6' /></a>
                     </button>
                     <button className="glow-border">
