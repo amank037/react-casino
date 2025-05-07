@@ -122,12 +122,11 @@ const Header = () => {
             <ul className="flex text-white items-center justify-between h-full ">
                 <li className='flex items-center gap-4 h-full'>
                     <button className="glow-border">
-                        <img src={homeIcon} alt="" className='h-6' />
-                        <a href="https://react-casino.onrender.com"></a>
+                        <a href="/home">
+                        <img src={homeIcon} alt="" className='h-6' /></a>
                     </button>
                     <button className="glow-border">
-                        <img src={mobileIcon} alt="" className='h-6' />
-                        <a href="/Mappdownload"></a>
+                        <a href="/Mappdownload"><img src={mobileIcon} alt="" className='h-6' /></a>
                     </button>
                 </li>
 
