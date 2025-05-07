@@ -183,7 +183,7 @@ const Header = () => {
 
 
             {/* Navigation with reduced borders */}
-<div className='h-10 bg-gray-800 flex items-center justify-center'>
+<div className='h-10 bg-head-grey flex items-center justify-center'>
   <ul className="flex text-white items-center justify-between h-full w-[75rem]">
     <li className='flex items-center gap-4 h-full'>
       <button className="glow-border relative h-full flex items-center">
@@ -202,10 +202,10 @@ const Header = () => {
       </button>
     </li>
 
-    <li className="grid grid-cols-8 grid-rows-1 items-center justify-between justify-items-stretch divide-x divide-gray-600 h-full w-full">
+    <li className="grid grid-cols-8 grid-rows-1 items-center justify-between justify-items-stretch  h-full w-full">
       <li className="relative group h-full">
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="#" className="hover:text-blue-400 flex items-center gap-1">
               Sports <i className="icon-angle-down"></i>
             </a>
@@ -221,7 +221,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/games/LIVE/ALL" className="hover:text-blue-400">Casino</a>
           </div>
         </div>
@@ -229,7 +229,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/games/SLOT/ALL" className="hover:text-blue-400">Slot</a>
           </div>
         </div>
@@ -237,7 +237,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/games/TABLE/ALL" className="hover:text-blue-400">Table</a>
           </div>
         </div>
@@ -245,7 +245,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/games/FH/ALL" className="hover:text-blue-400">Fishing</a>
           </div>
         </div>
@@ -253,7 +253,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/promotions" className="hover:text-blue-400">Promotions</a>
           </div>
         </div>
@@ -261,7 +261,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/vip" className="hover:text-blue-400">VIP</a>
           </div>
         </div>
@@ -269,7 +269,7 @@ const Header = () => {
 
       <li className='flex items-center justify-center h-full'>
         <div className="glow-border h-full w-full flex items-center justify-center">
-          <div className="h-[80%] flex items-center justify-center w-full"> {/* Inner container with reduced height */}
+          <div className="h-[50%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
             <a href="/referral" className="hover:text-blue-400">Referral</a>
           </div>
         </div>
