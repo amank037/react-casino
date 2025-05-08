@@ -1,76 +1,80 @@
-import loginImg from '../assets/login.jpeg';
+import loginImg from "../assets/login.jpeg";
 
 const Signup = () => {
   return (
-    <div className=" px-60 bg-gray-600 relative">
-      <div className="absolute top-4 right-4 text-sm text-yellow-400 cursor-pointer">
-        Contact Online CS
-      </div>
+    <div className="p-28 bg-[#4b4b4b] flex items-center justify-center relative">
+      <div className="border-4 border-blue-500 p-8 flex justify-between h-[600px] w-[1200px] shadow-xl">
+        {/* Left Side - Signup Form */}
+        <div className="pr-3 flex flex-auto flex-col justify-between">
+          <div>
+            <h2 className="text-yellow-400 text-center text-xl font-bold border-b border-yellow-400 pb-2 mb-6">
+              Sign Up
+            </h2>
 
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="flex w-[90%] h-[600px] border-2 border-blue-500 rounded-lg overflow-hidden shadow-lg bg-white">
-          <div className="w-[30%] p-10 flex flex-col justify-center">
-            <h2 className="text-2xl font-semibold mb-6">Sign Up</h2>
-
+            <label className="text-white block mb-1">User ID</label>
             <input
               type="text"
-              placeholder="User ID (4-15 char, allow number)"
+              placeholder="4-15 char; allow number"
               maxLength={25}
-              className="mb-4 p-2 border border-gray-300 rounded w-full lowercase"
+              className="w-full p-2 bg-[#3d3d3d] text-white rounded mb-4 lowercase"
               required
             />
 
+            <label className="text-white block mb-1">Password</label>
             <input
               type="password"
-              placeholder="Password (8-20 char)"
+              placeholder="8-20 char"
               minLength={6}
               maxLength={20}
-              className="mb-4 p-2 border border-gray-300 rounded w-full"
+              className="w-full p-2 bg-[#3d3d3d] text-white rounded mb-4"
               required
             />
 
+            <label className="text-white block mb-1">Confirm Password</label>
             <input
               type="password"
-              placeholder="Confirm Password"
+              placeholder="Re-enter password"
               minLength={8}
-              className="mb-4 p-2 border border-gray-300 rounded w-full"
+              className="w-full p-2 bg-[#3d3d3d] text-white rounded mb-4"
               required
             />
 
+            <label className="text-white block mb-1">Currency</label>
             <select
-              className="mb-4 p-2 border border-gray-300 rounded w-full"
+              className="w-full p-2 bg-[#3d3d3d] text-white rounded mb-4"
               required
             >
               <option value="BDT">BDT</option>
             </select>
 
+            <label className="text-white block mb-1">Refer Code <span className="text-gray-400">(optional)</span></label>
             <input
               type="text"
-              placeholder="Refer Code (optional)"
+              placeholder="Enter if any"
               minLength={6}
               maxLength={20}
-              className="mb-4 p-2 border border-gray-300 rounded w-full"
+              className="w-full p-2 bg-[#3d3d3d] text-white rounded mb-4"
             />
-
-            <button className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200">
-              Sign Up
-            </button>
-
-            <p className="text-sm mt-4">
-              Already have an account?{' '}
-              <span className="text-blue-600 cursor-pointer">Login</span>
-            </p>
           </div>
 
-          <div className="h-full p-6">
-            <img
-              src={loginImg}
-              alt="Signup Visual"
-              className="w-full h-full object-cover"
-            />
+          <div className="flex justify-end">
+            <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
+              <span className="text-white text-2xl pb-1 flex items-center justify-center">→</span>
+            </div>
           </div>
         </div>
+
+        {/* Right Side - Image */}
+        <div className="bg-black w-[734px] flex items-center justify-center">
+          <img src={loginImg} alt="Signup Visual" className="" />
+        </div>
       </div>
+
+      {/* Top Info Text */}
+      <p className="absolute top-[-1.875rem] text-white text-sm">
+        If you encounter issues, please contact
+        <span className="text-red-500 ml-1">Online CS</span>
+      </p>
     </div>
   );
 };

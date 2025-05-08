@@ -4,6 +4,7 @@ import Login from '../src/pages/Login'
 import Signup from '../src/pages/Signup'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Support from './components/Support'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <Support />
     </Router>
   );
 }
