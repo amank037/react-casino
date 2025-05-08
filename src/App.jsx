@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="pt-[133px]">
+      <main className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

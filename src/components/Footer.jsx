@@ -23,9 +23,8 @@ const Footer = () => {
     }
 
   return (
-    <div className="footer bg-footer-grey text-white py-8 px-60">
-
-        <div className=" mx-auto p-4 rounded-lg ">
+    <div className="footer bg-footer-grey text-white py-8 px-4 md:px-60 overflow-x-hidden">
+        <div className="mx-auto p-4 rounded-lg">
             <div className={`relative overflow-hidden text-sm text-gray-300 ${!isExpanded ? 'max-h-[400px]' : ''}`}>
 
                 <p className="mb-4">
@@ -117,7 +116,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="grid grid-flow-col items-stretch gap-8 text-center text-gray-400 border-t border-gray-700 mt-14 pt-6">
+        <div className="grid grid-cols-1 md:grid-flow-col items-stretch gap-8 text-center text-gray-400 border-t border-gray-700 mt-14 pt-6">
             <div className="flex flex-col justify-start gap-3">
                 <h4 className='text-left'>Responsible Gaming</h4>
                 <div className='flex justify-start w-full gap-2'>
@@ -129,7 +128,7 @@ const Footer = () => {
 
             <div className="flex flex-col justify-start gap-3">
                 <h4 className='text-left'>Payment Methods</h4>
-                <div className='flex justify-start align-center gap-2'>
+                <div className='flex flex-wrap justify-start align-center gap-2'>
                     <img src={pay16} alt="" className='h-8'/>
                     <img src={pay17} alt="" className='h-8' />
                     <img src={pay18} alt="" className='h-8' />
