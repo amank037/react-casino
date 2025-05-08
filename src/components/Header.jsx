@@ -257,7 +257,11 @@ const Header = () => {
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Exchange</span>
                     <a href="#" className="flex flex-col justify-between">
                       <img src={exchangeImg} alt="Exchange" className="w-64 h-64  object-contain mb-2" />
-                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      style={{
+                        clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
+                      }}
+                      >Play Now</a>
                     </a>
                   </div>
 
@@ -265,7 +269,11 @@ const Header = () => {
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Sportsbook</span>
                     <a href="#" className="flex flex-col justify-between">
                       <img src={sportsImg} alt="Sportsbook" className="w-64 h-64  object-contain mb-2" />
-                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      style={{
+                        clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
+                      }}
+                      >Play Now</a>
                     </a>
                   </div>
 
@@ -273,7 +281,11 @@ const Header = () => {
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Virtual</span>
                     <a href="#" className="flex flex-col justify-between">
                       <img src={virtualImg} alt="Virtual" className="w-64 h-64  object-contain mb-2" />
-                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      style={{
+                        clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
+                      }}
+                      >Play Now</a>
                     </a>
                   </div>
 
@@ -281,7 +293,11 @@ const Header = () => {
                     <span className="text-white font-medium text-lg block pl-2 border-l-2 border-yellow-400">  Horse Racing</span>
                     <a href="#" className="flex flex-col justify-between">
                       <img src={horsebookImg} alt="Horse Racing" className="w-64 h-64  object-contain" />
-                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      style={{
+                        clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
+                      }}
+                      >Play Now</a>
                     </a>
                   </div>
                 </div>
