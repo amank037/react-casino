@@ -11,6 +11,13 @@ import sponsor4 from '../assets/icons8-real-madrid-48.png'
 import mobileIcon from '../assets/icons8-android-phone-48.png'
 import homeIcon from '../assets/icons8-home-50.png'
 import bdImg from '../assets/BD.png'
+import exchangeImg from '../assets/navbar/exchange_inr_01.png'
+import sportsImg from '../assets/navbar/i-sports_inr_01.png'
+import virtualImg from '../assets/navbar/virtual_inr_01.png'
+import horsebookImg from '../assets/navbar/horsebook_inr_01.png'
+
+import '../assets/Header.css'
+
 
 const sponsorLogos = [sponsor1, sponsor2, sponsor3, sponsor4]
 
@@ -18,6 +25,7 @@ const Header = () => {
     const [currentTime, setCurrentTime] = useState('')
     const [showLangMenu, setShowLangMenu] = useState(false)
     const [currentPair, setCurrentPair] = useState(0)
+    const [showSportsMenu, setShowSportsMenu] = useState(false)
 
     useEffect(() => {
         const updateTime = () => {
@@ -142,7 +150,7 @@ const Header = () => {
         </div>
 
         {/* nav bar */}
-        <div className='h-10 bg-head-grey flex items-center justify-center'>
+        <div className='h-10 bg-head-grey flex items-center justify-center relative'>
           <ul className="flex text-white items-center justify-between h-full w-[75rem]">
             <li className='flex items-center gap-4 h-full'>
               <button className="glow-border relative h-full flex items-center">
@@ -161,20 +169,19 @@ const Header = () => {
               </button>
             </li>
 
-            <li className="text-sm grid grid-cols-8 grid-rows-1 items-center justify-between justify-items-stretch  h-full w-full">
-              <li className="relative group h-full">
-                <div className="glow-border h-full w-full flex items-center justify-center">
-                  <div className="h-[30%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid"> {/* Inner container with reduced height */}
-                    <a href="#" className="hover:text-blue-400 flex items-center gap-1">
+            <li className="text-sm grid grid-cols-8 grid-rows-1 items-center justify-between justify-items-stretch h-full w-full">
+              <li className="relative h-full">
+                <div className="glow-border h-full w-full flex items-center justify-center" 
+                onMouseEnter={() => setShowSportsMenu(true)}
+                    onMouseLeave={() => setShowSportsMenu(false)}>
+                  <div className="h-[30%] flex items-center justify-center w-full border-l border-r border-gray-300 border-solid">
+                    <a 
+                      href="#" 
+                      className="hover:text-blue-400 flex items-center gap-1"
+                    >
                       Sports <i className="icon-angle-down"></i>
                     </a>
                   </div>
-                </div>
-                <div className="absolute hidden group-hover:flex flex-col bg-gray-900 shadow-lg p-2 z-50 w-48">
-                  <a href="#" className="hover:bg-gray-700 px-4 py-2">Exchange</a>
-                  <a href="#" className="hover:bg-gray-700 px-4 py-2">Sportsbook</a>
-                  <a href="#" className="hover:bg-gray-700 px-4 py-2">Virtual</a>
-                  <a href="#" className="hover:bg-gray-700 px-4 py-2">Horse Racing</a>
                 </div>
               </li>
 
@@ -235,16 +242,55 @@ const Header = () => {
               </li>
             </li>
           </ul>
+          
+          {/* Full-width sports dropdown menu */}
+          {showSportsMenu && (
+            <div 
+              className="absolute left-0 top-full bg-footer-grey shadow-lg w-full z-50"
+              onMouseEnter={() => setShowSportsMenu(true)}
+              onMouseLeave={() => setShowSportsMenu(false)}
+            >
+              <div className="absolute bottom-0 left-0 w-full bg-nav-gray z-0 h-10"></div>
+              <div className="flex justify-center w-full">
+                <div className="flex justify-between max-w-[75rem] w-full px-4 z-10">
+                  <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey  pt-2 rounded transition-colors flex flex-col justify-between card-nav">
+                    <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Exchange</span>
+                    <a href="#" className="flex flex-col justify-between">
+                      <img src={exchangeImg} alt="Exchange" className="w-64 h-64  object-contain mb-2" />
+                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                    </a>
+                  </div>
+
+                  <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey pt-2 rounded transition-colors flex flex-col justify-between card-nav">
+                    <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Sportsbook</span>
+                    <a href="#" className="flex flex-col justify-between">
+                      <img src={sportsImg} alt="Sportsbook" className="w-64 h-64  object-contain mb-2" />
+                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                    </a>
+                  </div>
+
+                  <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey pt-2 rounded transition-colors flex flex-col justify-between card-nav">
+                    <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Virtual</span>
+                    <a href="#" className="flex flex-col justify-between">
+                      <img src={virtualImg} alt="Virtual" className="w-64 h-64  object-contain mb-2" />
+                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                    </a>
+                  </div>
+
+                  <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey pt-2 rounded transition-colors flex flex-col justify-between card-nav">
+                    <span className="text-white font-medium text-lg block pl-2 border-l-2 border-yellow-400">  Horse Racing</span>
+                    <a href="#" className="flex flex-col justify-between">
+                      <img src={horsebookImg} alt="Horse Racing" className="w-64 h-64  object-contain" />
+                      <p className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center  z-70 play-button h-10 flex items-center justify-center ">Play Now</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-
-        
-
     </header>
   )
 }
 
 export default Header
-
-
-
-

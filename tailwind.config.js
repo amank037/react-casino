@@ -11,6 +11,7 @@ export default {
         'head-grey': '#3e3e3e',
         'header-border-blue':'#0b6da8',
         'footer-grey': '#353535',
+        'nav-gray': '#212121'
       },
     },
   },
