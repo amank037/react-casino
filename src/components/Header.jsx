@@ -48,7 +48,7 @@ const Header = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentPair((prev) => (prev + 1) % 2)
-        }, 1000)
+        }, 3000)
 
         return () => clearInterval(interval)
     }, [])
