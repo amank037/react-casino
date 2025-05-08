@@ -1,4 +1,4 @@
-import loginImg from "../assets/login.jpeg";
+import loginImg from "../assets/login.jpeg"
 
 const Signup = () => {
   return (
