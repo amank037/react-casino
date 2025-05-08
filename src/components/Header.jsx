@@ -253,11 +253,12 @@ const Header = () => {
               <div className="absolute bottom-0 left-0 w-full bg-nav-gray z-0 h-10"></div>
               <div className="flex justify-center w-full">
                 <div className="flex justify-between max-w-[75rem] w-full px-4 z-10">
+
                   <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey  pt-2 rounded transition-colors flex flex-col justify-between card-nav">
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Exchange</span>
                     <a href="#" className="flex flex-col justify-between">
-                      <img src={exchangeImg} alt="Exchange" className="w-64 h-64  object-contain mb-2" />
-                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      <img src={exchangeImg} alt="Exchange" className="w-64 h-64  object-contain" />
+                      <a className="bg-nav-gray text-white w-[120%] ml-[-10%] mr-[-10%] hover:bg-blue-300 text-center w- flex z-70 play-button h-10 items-center justify-center "
                       style={{
                         clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
                       }}
@@ -268,8 +269,8 @@ const Header = () => {
                   <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey pt-2 rounded transition-colors flex flex-col justify-between card-nav">
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Sportsbook</span>
                     <a href="#" className="flex flex-col justify-between">
-                      <img src={sportsImg} alt="Sportsbook" className="w-64 h-64  object-contain mb-2" />
-                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      <img src={sportsImg} alt="Sportsbook" className="w-64 h-64  object-contain" />
+                      <a className="bg-nav-gray text-white w-[120%] ml-[-10%] mr-[-10%] hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
                       style={{
                         clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
                       }}
@@ -280,8 +281,8 @@ const Header = () => {
                   <div className="hover:bg-gradient-to-b hover:from-yellow-400/30 hover:to-footer-grey pt-2 rounded transition-colors flex flex-col justify-between card-nav">
                     <span className="text-white font-medium text-lg block mb-2 pl-2 border-l-2 border-yellow-400">  Virtual</span>
                     <a href="#" className="flex flex-col justify-between">
-                      <img src={virtualImg} alt="Virtual" className="w-64 h-64  object-contain mb-2" />
-                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      <img src={virtualImg} alt="Virtual" className="w-64 h-64  object-contain" />
+                      <a className="bg-nav-gray text-white w-[120%] ml-[-10%] mr-[-10%] hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
                       style={{
                         clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
                       }}
@@ -293,13 +294,14 @@ const Header = () => {
                     <span className="text-white font-medium text-lg block pl-2 border-l-2 border-yellow-400">  Horse Racing</span>
                     <a href="#" className="flex flex-col justify-between">
                       <img src={horsebookImg} alt="Horse Racing" className="w-64 h-64  object-contain" />
-                      <a className="bg-nav-gray text-white w-full hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
+                      <a className="bg-nav-gray text-white w-[120%] ml-[-10%] mr-[-10%] hover:bg-blue-300 text-center flex z-70 play-button h-10 items-center justify-center "
                       style={{
                         clipPath: "polygon(6% 0, 100% 0, 94% 100%, 0% 100%)"
                       }}
                       >Play Now</a>
                     </a>
                   </div>
+
                 </div>
               </div>
             </div>
