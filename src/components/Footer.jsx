@@ -23,7 +23,7 @@ const Footer = () => {
     }
 
   return (
-    <div className="footer bg-gray-800 text-white py-8 px-60">
+    <div className="footer bg-footer-grey text-white py-8 px-60">
 
         <div className=" mx-auto p-4 rounded-lg ">
             <div className={`relative overflow-hidden text-sm text-gray-300 ${!isExpanded ? 'max-h-[400px]' : ''}`}>
@@ -73,7 +73,7 @@ const Footer = () => {
                 </p>
 
                 {!isExpanded && (
-                <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-gray-800 via-gray-800/60  to-gray-800/10 to-80% pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-footer-grey via-footer-grey/60  to-footer-grey/10 to-80% pointer-events-none"></div>
                 )}
             </div>
 
@@ -117,7 +117,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="grid grid-flow-col items-stretch gap-8 mt-14 text-center text-gray-400 border-t border-gray-700 mt-14 pt-6">
+        <div className="grid grid-flow-col items-stretch gap-8 text-center text-gray-400 border-t border-gray-700 mt-14 pt-6">
             <div className="flex flex-col justify-start gap-3">
                 <h4 className='text-left'>Responsible Gaming</h4>
                 <div className='flex justify-start w-full gap-2'>

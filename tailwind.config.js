@@ -9,6 +9,8 @@ export default {
       colors: {
         'home-grey': '#4e4e4e',
         'head-grey': '#3e3e3e',
+        'header-border-blue':'#0b6da8',
+        'footer-grey': '#353535',
       },
     },
   },
