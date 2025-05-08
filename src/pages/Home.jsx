@@ -15,7 +15,7 @@ const Home = () => {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0)
   const heroContainerRef = useRef(null)
 
-  // Hero image scroll effect
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % heroImages.length)
@@ -38,7 +38,7 @@ const Home = () => {
   const scroller1Ref = useRef(null)
   const scroller2Ref = useRef(null)
 
-  // Scroller 1 effect
+
   useEffect(() => {
     const timer1 = setInterval(() => {
       setCurrentSecondScrollerIndex1((prevIndex) => (prevIndex + 1) % secondScrollerImages1.length)
@@ -46,7 +46,7 @@ const Home = () => {
     return () => clearInterval(timer1)
   }, [secondScrollerImages1.length])
 
-  // Scroller 2 effect
+
   useEffect(() => {
     const timer2 = setInterval(() => {
       setCurrentSecondScrollerIndex2((prevIndex) => (prevIndex + 1) % secondScrollerImages2.length)
@@ -56,7 +56,7 @@ const Home = () => {
 
   return (
     <div className="home w-full overflow-x-hidden">
-      {/* Hero Section */}
+
       <div className="w-full relative mt-0 h-auto sm:h-[32rem]">
         <div className="w-full relative h-auto sm:h-[32rem] overflow-hidden">
           <div 
@@ -82,7 +82,6 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Navigation Dots */}
           <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4">
             {heroImages.map((_, index) => (
               <button
@@ -98,12 +97,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Announcement Bar */}
       <div className="bg-blue-600 w-full py-2 text-left px-4 md:px-[18rem] text-white">
         <span className="ml-4">🔊</span>
       </div>
 
-      {/* Image Scrollers Section */}
       <div className="bg-home-grey w-full flex justify-center px-4">
         <div className='w-full max-w-[75rem] grid grid-cols-1 md:grid-cols-2 gap-4 py-8'>
           
@@ -132,7 +129,6 @@ const Home = () => {
                 ))}
               </div>
               
-              {/* Scroller Controls */}
               <div className="absolute top-0 left-0 right-0 bg-blue-500 h-12 flex items-center justify-between px-2">
                 <div className="text-white font-bold">Favourites</div>
                 <div className="flex">
@@ -186,7 +182,6 @@ const Home = () => {
                 ))}
               </div>
               
-              {/* Scroller Controls */}
               <div className="absolute top-0 left-0 right-0 bg-blue-500 h-12 flex items-center justify-between px-2">
                 <div className="text-white font-bold">Favourites</div>
                 <div className="flex">

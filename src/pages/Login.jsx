@@ -8,7 +8,6 @@ export default function Login() {
   return (
     <div className="p-4 sm:p-28 bg-[#4b4b4b] flex items-center justify-center min-h-screen">
       <div className="border-4 border-blue-500 p-4 sm:p-8 flex flex-col sm:flex-row justify-between h-auto sm:h-[600px] w-full sm:w-[1200px] shadow-xl">
-        {/* Left Side - Login Form */}
         <div className="pr-0 sm:pr-3 mb-8 sm:mb-36 flex flex-auto flex-col justify-between">
           <div>
             <h2 className="text-yellow-400 text-center text-xl font-bold border-b border-yellow-400 pb-2 mb-6">
@@ -54,7 +53,6 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Right Side - Image */}
         <div className="bg-black w-full sm:w-[734px] flex items-center justify-center overflow-hidden">
           <img 
             src={loginImg} 
